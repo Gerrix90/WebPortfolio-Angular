@@ -1,20 +1,166 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="sidebar" id="sidebar">
+  <div class="toggle open" id="toggle" onclick="toggleSidebar()">
+    <i class="fas fa-bars" id="toggle-bars"></i>
+    <i class="fas fa-times" id="toggle-times"></i>
+  </div>
+  <div class="links">
+    <a class="smooth-scroll" href="#home">Home</a>
+    <a class="smooth-scroll" href="#introduction">Introduction</a>
+    <a class="smooth-scroll" href="#projects">Projects</a>
+    <a class="smooth-scroll" href="#testimonials">Testimonials</a>
+    <a class="smooth-scroll" href="#contact">Contact</a>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
+<div class="section" id="home">
+  <div class="cstm-slider">
+    <div class="slider-section left">
+      <div class="bio">
+        <p class="text-title">Abdul Jalil Mian</p>
+        <p class="text-desc">Developer</p>
+        <p class="text-desc">Freelancer</p>
+        <p class="text-desc">Tech Enthusiast</p>
+      </div>
+      <a class="more-info smooth-scroll" href="#introduction">
+        <i class="fas fa-arrow-down"></i>
+        <p>More information</p>
+      </a>
+    </div>
+    <div class="slider-section right">
+      <div class="picture">
+        <img src="../assets/images/bg.jpg">
+      </div>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/abduljalilm/" target="_blank">
+          <div class="social-btn">
+            <i class="fab fa-linkedin"></i>
+          </div>
+        </a>
+        <a href="https://github.com/abduljalilm94" target="_blank">
+          <div class="social-btn">
+            <i class="fab fa-github"></i>
+          </div>
+        </a>
+        <a href="https://twitter.com/AbdulJalil94" target="_blank">
+          <div class="social-btn">
+            <i class="fab fa-twitter"></i>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="introduction">
+  <div class="container">
+    <h1 class="sec-title">Introduction</h1>
+    <div class="cstm-intro">
+      <h1>Hi! I am a Software Engineer based in Pakistan. I love developing apps for web and phone. I am passionate
+        about learning different technologies and frameworks.</h1>
+      <h1>Scroll down to see some of my projects.</h1>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="projects">
+  <div class="container">
+    <h1 class="sec-title">Projects</h1>
+    <div class="cstm-gallery">
+      <div class="gallery-item">
+        <img src="https://picsum.photos/600/600/?random">
+        <div class="item-overlay">
+          <p class="title">My Awesome Project</p>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+            ut aliquip ex ea commodo consequat. </p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://picsum.photos/600/600/?random">
+        <div class="item-overlay">
+          <p class="title">My Awesome Project</p>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+            ut aliquip ex ea commodo consequat. </p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://picsum.photos/600/600/?random">
+        <div class="item-overlay">
+          <p class="title">My Awesome Project</p>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+            ut aliquip ex ea commodo consequat. </p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://picsum.photos/600/600/?random">
+        <div class="item-overlay">
+          <p class="title">My Awesome Project</p>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+            ut aliquip ex ea commodo consequat. </p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://picsum.photos/600/600/?random">
+        <div class="item-overlay">
+          <p class="title">My Awesome Project</p>
+          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+            ut aliquip ex ea commodo consequat. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="testimonials">
+  <div class="container">
+    <h1 class="sec-title">Testimonials</h1>
+    <div class="cstm-test">
+      <div class="slider-container" id="slider-container">
+        <div class="test-slide">
+          <div class="slide-content">
+            <i class="fas fa-quote-left"></i>
+            <p class="test-quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <i class="test-name">— John Doe, CEO Doe Technologies</i>
+          </div>
+        </div>
+        <div class="test-slide">
+          <div class="slide-content">
+            <i class="fas fa-quote-left"></i>
+            <p class="test-quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <i class="test-name">— Jane Doe, CFO Doe Corporations</i>
+          </div>
+        </div>
+      </div>
+      <div class="slider-ctrl-container">
+        <div class="slider-ctrl left" onclick="prevSlide()">
+          <span><i class="fas fa-less-than"></i> Previous</span>
+        </div>
+        <div class="slider-ctrl right" onclick="nextSlide()">
+          <span>Next <i class="fas fa-greater-than"></i></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="contact">
+  <div class="container">
+    <h1 class="sec-title">Contact</h1>
+    <div class="cstm-contact">
+      <a class="contact-links" href="mailto:abduljalilm94@gmail.com"><i class="fas fa-envelope"></i>
+        abduljalilm94@gmail.com</a>
+      <a class="contact-links" href="skype:abduljalil94"><i class="fab fa-skype"></i> abduljalil94</a>
+      <a class="contact-links" href="https://www.linkedin.com/in/abduljalilm"><i class="fab fa-linkedin"></i>
+        abduljalilm</a>
+      <a class="contact-links" href="https://github.com/abduljalilm94"><i class="fab fa-github"></i> abduljalilm94</a>
+      <a class="contact-links" href="https://twitter.com/AbdulJalil94"><i class="fab fa-twitter"></i> abduljalil94</a>
+      <button>Save My Résumé</button>
+    </div>
+  </div>
+</div>
+
+<div class="overlay" id="overlay"></div>

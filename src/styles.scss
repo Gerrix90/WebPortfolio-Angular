@@ -1,1 +1,403 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+
+$accent: #72313c;
+$accent-hover: #793e48;
+$light-gray: #ddd;
+$dark-gray: #333;
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: $dark-gray;
+}
+
+h1 {
+    margin-bottom: 0.8em;
+
+    &.sec-title {
+        // text-transform: uppercase;
+        text-align: center;
+        font-weight: bold;
+        color: $accent;
+    }
+}
+
+button {
+    border: none;
+    background-color: $accent;
+    height: 60px;
+    min-width: 160px;
+    padding: 0 15px;
+    font-size: 24px;
+    // font-weight: bold;
+    color: $light-gray;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+        background: $accent-hover;
+    }
+}
+
+.section {
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // text-align: center;
+
+    &:nth-of-type(even) {
+        background: #eee;
+    }
+}
+
+.sidebar {
+    position: fixed;
+    background-color: $accent;
+    z-index: 10;
+    height: 60px;
+    width: 300px;
+    top: 0;
+    left: -240px;
+    overflow: hidden;
+    transition: height 0.2s ease-out, left 0.3s;
+
+    .toggle {
+        background-color: $accent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 60px;
+        width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 11;
+
+        &:hover {
+            background: $accent-hover;
+        }
+
+        .fas {
+            position: absolute;
+            color: $light-gray;
+            font-size: 22px;
+            transition: opacity 0.2s;
+
+            &.fa-bars {
+                opacity: 1;
+            }
+
+            &.fa-times {
+                opacity: 0;
+            }
+        }
+    }
+
+    .links {
+        margin-top: 100px;
+
+        a {
+            width: 100%;
+            padding: 18px 30px;
+            box-sizing: border-box;
+            color: $light-gray;
+            background: $accent;
+            text-decoration: none;
+            font-size: 28px;
+            display: block;
+
+            &:hover {
+                background: $accent-hover;
+            }
+        }
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    z-index: 9;
+    display: none;
+    transition: opacity 0.3s;
+}
+
+.cstm-slider {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+
+    .slider-section {
+        width: 50%;
+        height: 100%;
+        position: relative;
+
+        &.left {
+            float: left;
+            display: flex;
+            align-items: center;
+        }
+
+        &.right {
+            float: right;
+
+        }
+
+        .picture {
+            width: 100%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .social {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+
+            .social-btn {
+                float: left;
+                background-color: $accent;
+                height: 60px;
+                width: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                &:hover {
+                    background: $accent-hover;
+                }
+
+                .fab {
+                    color: $light-gray;
+                    font-size: 22px;
+                }
+            }
+        }
+
+        .more-info {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background-color: $light-gray;
+            text-decoration: none;
+            height: 60px;
+            width: 500px;
+            padding: 0 20px 0;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.9;
+            }
+
+            p {
+                color: $accent;
+                font-size: 24px;
+                font-weight: bold;
+                margin: 0;
+            }
+
+            .fas {
+                color: $accent;
+                font-size: 22px;
+                margin-right: 22px;
+            }
+        }
+
+        .bio {
+            width: 100%;
+            padding: 10%;
+            margin-bottom: 20%;
+            text-align: right;
+
+            p {
+                color: $accent;
+
+                &.text-title {
+                    font-size: 80px;
+                    font-weight: bold;
+                    margin: 0 0 12px;
+                }
+
+                &.text-desc {
+                    font-size: 36px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+.cstm-intro {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.cstm-gallery {
+
+    .gallery-item {
+        float: left;
+        width: 31.33%;
+        margin: 14px 1%;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:hover {
+            .item-overlay {
+                top: 0%;
+            }
+        }
+
+        img {
+           width: 100%;
+           height: 300px;
+        }
+
+        .item-overlay {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 12px;
+            position: absolute;
+            top: 100%;
+            transition: top 0.6s;
+            background: rgba(0, 0, 0, 0.8);
+
+            .title {
+                font-size: 24px;
+                color: $light-gray;
+            }
+
+            .desc {
+                font-size: 16px;
+                color: $light-gray;
+            }
+        }
+    }
+}
+
+.cstm-test {
+  width: 850px;
+  margin: 0 auto;
+
+  .slider-container {
+    width: 100%;
+    height: 300px;
+    margin: 40px 0;
+    overflow: hidden;
+    position: relative;
+
+    .test-slide {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 100%;
+      padding: 0 34px;
+      text-align: center;
+      transition: left 0.6s;
+
+      &:first-of-type {
+        left: 0;
+      }
+
+      .slide-content {
+        text-align: right;
+
+        .fas {
+          color: $accent;
+          font-size: 32px;
+          position: relative;
+          left: -100%;
+          top: -1rem;
+        }
+
+        .test-quote {
+          font-size: 24px;
+          color: $dark-gray;
+          text-align: center;
+        }
+
+        .test-name {
+          font-size: 18px;
+          color: $accent;
+        }
+      }
+    }
+  }
+
+  .slider-ctrl-container {
+    width: 100%;
+    position: relative;
+
+    .slider-ctrl {
+      position: absolute;
+      font-size: 18px;
+      font-weight: bold;
+      color: $accent;
+      cursor: pointer;
+
+      &.left {
+        left: 0;
+      };
+
+      &.right {
+        right: 0;
+      }
+
+      .fas {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+.cstm-contact {
+    text-align: center;
+
+    .fas, .fab {
+        margin-right: 12px;
+    }
+
+    .contact-links {
+        display: block;
+        font-size: 24px;
+        color: $accent;
+        text-decoration: none;
+        margin-bottom: 16px;
+
+        &:last-of-type {
+            margin-bottom: 28px;
+        }
+    }
+}
