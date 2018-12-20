@@ -1,16 +1,4 @@
-<div class="sidebar" id="sidebar">
-  <div class="toggle open" id="toggle" onclick="toggleSidebar()">
-    <i class="fas fa-bars" id="toggle-bars"></i>
-    <i class="fas fa-times" id="toggle-times"></i>
-  </div>
-  <div class="links">
-    <a class="smooth-scroll" href="#home">Home</a>
-    <a class="smooth-scroll" href="#introduction">Introduction</a>
-    <a class="smooth-scroll" href="#projects">Projects</a>
-    <a class="smooth-scroll" href="#testimonials">Testimonials</a>
-    <a class="smooth-scroll" href="#contact">Contact</a>
-  </div>
-</div>
+<app-sidebar></app-sidebar>
 
 <div class="section" id="home">
   <div class="cstm-slider">
@@ -28,7 +16,7 @@
     </div>
     <div class="slider-section right">
       <div class="picture">
-        <img src="../assets/images/bg.jpg">
+        <img src="assets/images/bg.JPG">
       </div>
       <div class="social">
         <a href="https://www.linkedin.com/in/abduljalilm/" target="_blank">
@@ -65,85 +53,14 @@
 <div class="section" id="projects">
   <div class="container">
     <h1 class="sec-title">Projects</h1>
-    <div class="cstm-gallery">
-      <div class="gallery-item">
-        <img src="https://picsum.photos/600/600/?random">
-        <div class="item-overlay">
-          <p class="title">My Awesome Project</p>
-          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-            ut aliquip ex ea commodo consequat. </p>
-        </div>
-      </div>
-      <div class="gallery-item">
-        <img src="https://picsum.photos/600/600/?random">
-        <div class="item-overlay">
-          <p class="title">My Awesome Project</p>
-          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-            ut aliquip ex ea commodo consequat. </p>
-        </div>
-      </div>
-      <div class="gallery-item">
-        <img src="https://picsum.photos/600/600/?random">
-        <div class="item-overlay">
-          <p class="title">My Awesome Project</p>
-          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-            ut aliquip ex ea commodo consequat. </p>
-        </div>
-      </div>
-      <div class="gallery-item">
-        <img src="https://picsum.photos/600/600/?random">
-        <div class="item-overlay">
-          <p class="title">My Awesome Project</p>
-          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-            ut aliquip ex ea commodo consequat. </p>
-        </div>
-      </div>
-      <div class="gallery-item">
-        <img src="https://picsum.photos/600/600/?random">
-        <div class="item-overlay">
-          <p class="title">My Awesome Project</p>
-          <p class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-            ut aliquip ex ea commodo consequat. </p>
-        </div>
-      </div>
-    </div>
+    <app-gallery></app-gallery>
   </div>
 </div>
 
 <div class="section" id="testimonials">
   <div class="container">
     <h1 class="sec-title">Testimonials</h1>
-    <div class="cstm-test">
-      <div class="slider-container" id="slider-container">
-        <div class="test-slide">
-          <div class="slide-content">
-            <i class="fas fa-quote-left"></i>
-            <p class="test-quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <i class="test-name">— John Doe, CEO Doe Technologies</i>
-          </div>
-        </div>
-        <div class="test-slide">
-          <div class="slide-content">
-            <i class="fas fa-quote-left"></i>
-            <p class="test-quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <i class="test-name">— Jane Doe, CFO Doe Corporations</i>
-          </div>
-        </div>
-      </div>
-      <div class="slider-ctrl-container">
-        <div class="slider-ctrl left" onclick="prevSlide()">
-          <span><i class="fas fa-less-than"></i> Previous</span>
-        </div>
-        <div class="slider-ctrl right" onclick="nextSlide()">
-          <span>Next <i class="fas fa-greater-than"></i></span>
-        </div>
-      </div>
-    </div>
+    <app-testimonials></app-testimonials>
   </div>
 </div>
 
@@ -163,4 +80,4 @@
   </div>
 </div>
 
-<div class="overlay" id="overlay"></div>
+<div class="overlay" *ngIf="showOverlay"></div>

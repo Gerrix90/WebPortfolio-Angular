@@ -1,0 +1,13 @@
+<div class="sidebar" [ngClass]="{'show': showSidebar}" #appSidebar>
+  <div class="toggle open" id="toggle" (click)="toggleSidebar(appSidebar)">
+    <i class="fas fa-bars" id="toggle-bars"></i>
+    <i class="fas fa-times" id="toggle-times"></i>
+  </div>
+  <div class="links">
+    <a class="smooth-scroll" href="#home">Home</a>
+    <a class="smooth-scroll" href="#introduction">Introduction</a>
+    <a class="smooth-scroll" href="#projects">Projects</a>
+    <a class="smooth-scroll" href="#testimonials">Testimonials</a>
+    <a class="smooth-scroll" href="#contact">Contact</a>
+  </div>
+</div>

@@ -63,67 +63,73 @@ button {
 }
 
 .sidebar {
-    position: fixed;
-    background-color: $accent;
-    z-index: 10;
-    height: 60px;
-    width: 300px;
-    top: 0;
-    left: -240px;
-    overflow: hidden;
-    transition: height 0.2s ease-out, left 0.3s;
+  position: fixed;
+  background-color: $accent;
+  z-index: 10;
+  height: 60px;
+  width: 300px;
+  top: 0;
+  left: -240px;
+  overflow: hidden;
+  transition: height 0.2s ease-out 0.2s, left 0.2s linear 0s;
 
-    .toggle {
-        background-color: $accent;
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: 60px;
-        width: 60px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        z-index: 11;
+  &.show {
+    height: 100%;
+    left: 0;
+    transition: height 0.2s ease-out 0s, left 0.2s linear 0.2s;
+  }
 
-        &:hover {
-            background: $accent-hover;
-        }
+  .toggle {
+      background-color: $accent;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 60px;
+      width: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 11;
 
-        .fas {
-            position: absolute;
-            color: $light-gray;
-            font-size: 22px;
-            transition: opacity 0.2s;
+      &:hover {
+          background: $accent-hover;
+      }
 
-            &.fa-bars {
-                opacity: 1;
-            }
+      .fas {
+          position: absolute;
+          color: $light-gray;
+          font-size: 22px;
+          transition: opacity 0.2s;
 
-            &.fa-times {
-                opacity: 0;
-            }
-        }
-    }
+          &.fa-bars {
+              opacity: 1;
+          }
 
-    .links {
-        margin-top: 100px;
+          &.fa-times {
+              opacity: 0;
+          }
+      }
+  }
 
-        a {
-            width: 100%;
-            padding: 18px 30px;
-            box-sizing: border-box;
-            color: $light-gray;
-            background: $accent;
-            text-decoration: none;
-            font-size: 28px;
-            display: block;
+  .links {
+      margin-top: 100px;
 
-            &:hover {
-                background: $accent-hover;
-            }
-        }
-    }
+      a {
+          width: 100%;
+          padding: 18px 30px;
+          box-sizing: border-box;
+          color: $light-gray;
+          background: $accent;
+          text-decoration: none;
+          font-size: 28px;
+          display: block;
+
+          &:hover {
+              background: $accent-hover;
+          }
+      }
+  }
 }
 
 .overlay {
@@ -133,10 +139,8 @@ button {
     background-color: #000;
     width: 100%;
     height: 100vh;
-    opacity: 0;
+    opacity: 0.5;
     z-index: 9;
-    display: none;
-    transition: opacity 0.3s;
 }
 
 .cstm-slider {

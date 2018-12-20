@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'abduljalil-v2';
+  showOverlay = false;
+
+  toggleOverlay() {
+    this.showOverlay = !this.showOverlay;
+  }
 }
