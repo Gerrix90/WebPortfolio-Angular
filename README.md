@@ -9,4 +9,4 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Issues
 
-If you find any issues, report them by going to the [Issues](https://github.com/abduljalilm94/WebPortfolio-Angular/issues) tab and creating a new issue and assign them to me.
+If you find any issues, report them by going to the [Issues](https://github.com/abduljalilm94/WebPortfolio-Angular/issues) tab, create a new issue and assign it to me.
