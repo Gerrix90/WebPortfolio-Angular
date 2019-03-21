@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  private showSidebar: boolean;
+  showSidebar: boolean;
 
   toggleSidebar(sb) {
     this.showSidebar = !this.showSidebar;
